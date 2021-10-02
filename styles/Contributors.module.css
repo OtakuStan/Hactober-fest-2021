@@ -10,6 +10,27 @@
   text-align: center;
 }
 
+.section__title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 5rem auto;
+}
+
+.section__title h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 0.5em;
+}
+
+.margin{
+  width: 120px;
+  height: 2.5px;
+  border-radius: 5px;
+  background-image: linear-gradient(to right, #fa3967 , #fa9639);
+}
+
 .posts {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
