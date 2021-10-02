@@ -30,7 +30,7 @@ const Hero = () => {
 
         <h4>An Open event for everyone to make positive contributions to an ever-growing developer community</h4>
 
-        <button className={styles.cta__btn}>Start Hacking</button>
+        <button className={styles.cta__btn} onClick={() => window.open("https://hacktoberfest.digitalocean.com/", "_blank")}>Start Hacking</button>
       </div>
     </section>
   );
