@@ -1,5 +1,4 @@
 import { FC } from "react";
-import Image from "next/image";
 import styles from "styles/Profile.module.css";
 
 type Frontmatter = {
@@ -20,28 +19,19 @@ const Profile: FC<Frontmatter> = ({
   following,
 }) => {
   return (
-    <div className={styles.card}>
-      <Image src={image} alt="GitHub Profile Image" />
+    <div className={styles.profile}>
+      <img src={image} className={styles.photo} alt="github" />
 
-      <h3>{title}</h3>
+      <span className={styles.name}>{title}</span>
+      <span className={styles.details}>
+        Building next-gen energy tech product at Company
+      </span>
 
-      <div>
-        <div>
-          <p>Repos</p>
-          <h4>{repos}</h4>
-        </div>
-        <div>
-          <p>Followers</p>
-          <h4>{followers}</h4>
-        </div>
-
-        <div>
-          <p>Following</p>
-          <h4>{following}</h4>
-        </div>
+      <div className={styles.buttons}>
+        <div className={styles.button}>{repos} Repos</div>
+        <div className={styles.button}>{followers} Followers</div>
+        <div className={styles.button}>{following} Following</div>
       </div>
-
-      <button onClick={() => window.open(url, "_blank")}></button>
     </div>
   );
 };
