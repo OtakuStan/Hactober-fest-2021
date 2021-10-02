@@ -1,28 +1,56 @@
-.card {
-  padding: 15px;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+.profile {
+  margin: auto;
+  background-color: #1d1818;
+  border-radius: 40px;
+  width: 480px;
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
-.card__page {
-  padding: 15px 30px;
+.photo {
+  width: 120px;
+  height: 120px;
+  border-radius: 30px;
+  border: 15px solid rgba(#f6f2ff, 0.7);
+  object-fit: cover;
 }
-
-.profile_heading {
-  margin: 10px 0;
-}
-
-.profile__body ul,
-ol {
-  font-size: 110%;
-  line-height: 2.3;
+.name {
+  margin-top: 24px;
+  font-size: 30px;
   font-weight: bold;
-  margin: 10px 0;
+}
+.details {
+  font-size: 13px;
+  font-weight: 400;
+  width: 50%;
+  margin-top: 8px;
+  line-height: 1.3;
+  text-align: center;
 }
 
-.profile__body pre {
-  background: #f4f4f4;
-  padding: 20px;
-  margin: 20px 0;
-  line-height: 2.3;
+.buttons {
+  display: flex;
+  align-items: center;
+  margin-top: 50px;
+}
+
+.message {
+  background-color: #ffedd2;
+}
+.button {
+  width: 120px;
+  height: 54px;
+  border-radius: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 15px;
+  font-weight: 500;
+  margin-left: 12px;
+  cursor: pointer;
+  color: #ffffff;
+  background-image: linear-gradient(to right, #fa3967 , #fa9639)
 }
