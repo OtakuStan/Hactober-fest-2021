@@ -11,6 +11,9 @@
 ## About
 This repo is intended to help all the newbie developers in the software developer community looking out to contribute and enter into the world of open source. For anyone starting fresh open source contributions can be very daunting at first but as you gain experience you become good at it. This project was made to help all the newcomers to submit their first pull request
 
+## Note
+<h1>This Repository is for beginners only!! </h1>
+
 ## How to submit a pull request
 1. Fork this repo in your GitHub
 
