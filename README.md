@@ -1,6 +1,6 @@
 <a href="#">
 <p align="center">
-<img height=80 width=380 src="./public/images/hacktoberfest-logo.png"/>
+<img height=150 src="./public/images/hacktoberfest-logo.png"/>
 </p>
 </a>
 
