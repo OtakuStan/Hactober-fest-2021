@@ -27,13 +27,13 @@ git clone <repo-link>
 
 4. Add your details in the md file
 
-
+```md
 ---
 name: ''
 username: ''
 description: ''
 ---
-
+```
 
 
 5. Stage and commit your changes
