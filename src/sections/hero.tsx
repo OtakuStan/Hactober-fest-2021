@@ -11,8 +11,8 @@ const Hero = () => {
             <Image
               src="/images/os-logo.png"
               alt="Hero Image"
-              width="350px"
-              height="370px"
+              width="270px"
+              height="260px"
             />
           </div>
           <div>
@@ -22,8 +22,8 @@ const Hero = () => {
             <Image
               src="/images/hacktoberfest-logo.png"
               alt="Hero Image"
-              width="500px"
-              height="200px"
+              width="400px"
+              height="150px"
             />
           </div>
         </div>
