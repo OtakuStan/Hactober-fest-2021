@@ -1,12 +1,22 @@
 import type { NextPage } from "next";
 import Head from "next/head";
+import fs from "fs";
+import path from "path";
+import matter from "gray-matter";
 
 import Hero from "src/sections/hero";
 import Contributors from "src/sections/contributors";
 import Navbar from "src/components/Navbar";
 import styles from "styles/Home.module.css";
+import axios from "axios";
 
-const Home: NextPage = () => {
+type Profiles = {
+  profiles: Array<{
+    username: string;
+    descrition: string;
+  }>;
+};
+const Home: NextPage<Profiles> = ({ profiles }) => {
   return (
     <div>
       <Head>
@@ -18,7 +28,7 @@ const Home: NextPage = () => {
 
       <Hero />
 
-      <Contributors />
+      <Contributors profiles={profiles} />
 
       <div className={styles.container}>
         <main className={styles.main}>
@@ -30,3 +40,36 @@ const Home: NextPage = () => {
 };
 
 export default Home;
+
+export async function getStaticProps() {
+  const files = fs.readdirSync(path.join("profiles"));
+  const profiles = await Promise.all(
+    files.map(async (filename) => {
+      // Create slug
+      const slug = filename.replace(".md", "");
+
+      // Get frontmatter
+      const markdownWithMeta = fs.readFileSync(
+        path.join("profiles", filename),
+        "utf-8"
+      );
+
+      const { data: frontmatter } = matter(markdownWithMeta);
+      const { data } = await axios.get(
+        `https://api.github.com/users/${frontmatter.username}`
+      );
+
+      const frontmatterWithGithub = {...frontmatter, ...data as any};
+
+      return {
+        slug,
+        frontmatterWithGithub,
+      };
+    })
+  );
+  return {
+    props: {
+      profiles,
+    },
+  };
+}
