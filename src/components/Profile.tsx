@@ -4,7 +4,6 @@ import styles from "styles/Profile.module.css";
 
 type Frontmatter = {
   title: string;
-  description: string;
   image: string;
   url: string;
   repos: number;
