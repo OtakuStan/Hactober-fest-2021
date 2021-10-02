@@ -7,7 +7,6 @@ import matter from "gray-matter";
 import Hero from "src/sections/hero";
 import Contributors from "src/sections/contributors";
 import Navbar from "src/components/Navbar";
-import styles from "styles/Home.module.css";
 import axios from "axios";
 
 type Profiles = {
@@ -29,12 +28,6 @@ const Home: NextPage<Profiles> = ({ profiles }) => {
       <Hero />
 
       <Contributors profiles={profiles} />
-
-      <div className={styles.container}>
-        <main className={styles.main}>
-          <h1>Hello</h1>
-        </main>
-      </div>
     </div>
   );
 };
