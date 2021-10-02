@@ -3,6 +3,9 @@ import styles from "styles/Profile.module.css";
 
 type Frontmatter = {
   title: string;
+  description: string;
+  username: string;
+  bio: string;
   image: string;
   url: string;
   repos: number;
@@ -13,18 +16,22 @@ type Frontmatter = {
 const Profile: FC<Frontmatter> = ({
   image,
   title,
+  description,
+  username,
+  bio,
   url,
   repos,
   followers,
   following,
 }) => {
   return (
-    <div className={styles.profile}>
+    <div className={styles.profile} onClick={() => window.open(url,"_blank")}> 
       <img src={image} className={styles.photo} alt="github" />
 
       <span className={styles.name}>{title}</span>
+      <span className={styles.username}>@{username}</span>
       <span className={styles.details}>
-        Building next-gen energy tech product at Company
+        {description ? description : bio}
       </span>
 
       <div className={styles.buttons}>
