@@ -1,42 +1,34 @@
+import { FC, Profiler } from "react";
 import styles from "styles/Contributors.module.css";
 import Profile from "src/components/Profile";
-const contributors = () => {
+type Profiles = {
+  profiles: any;
+};
+const contributors: FC<Profiles> = ({ profiles }) => {
   return (
     <section id="contributors">
       <div className={styles.contributors__section}>
+        <div className={styles.section__title}>
+          <h1>Contributors</h1>
+          <div className={styles.margin}></div>
+        </div>
         <div className={styles.posts}>
-          <Profile
-            title="Lunaticsatoshi"
-            image="https://avatars.githubusercontent.com/u/47326452?v=4"
-            repos={4}
-            followers={2}
-            following={2}
-            url="https://api.github.com/users/Lunaticsatoshi"
-          />
-          <Profile
-            title="Lunaticsatoshi"
-            image="https://avatars.githubusercontent.com/u/47326452?v=4"
-            repos={4}
-            followers={2}
-            following={2}
-            url="https://api.github.com/users/Lunaticsatoshi"
-          />
-          <Profile
-            title="Lunaticsatoshi"
-            image="https://avatars.githubusercontent.com/u/47326452?v=4"
-            repos={4}
-            followers={2}
-            following={2}
-            url="https://api.github.com/users/Lunaticsatoshi"
-          />
-          <Profile
-            title="Lunaticsatoshi"
-            image="https://avatars.githubusercontent.com/u/47326452?v=4"
-            repos={4}
-            followers={2}
-            following={2}
-            url="https://api.github.com/users/Lunaticsatoshi"
-          />
+          {profiles.map((profile: any) => {
+            return (
+              <Profile
+                key={profile.frontmatterWithGithub.id}
+                username={profile.frontmatterWithGithub.username}
+                title={profile.frontmatterWithGithub.name}
+                description={profile.frontmatterWithGithub.description}
+                bio={profile.frontmatterWithGithub.bio}
+                image={profile.frontmatterWithGithub.avatar_url}
+                url={profile.frontmatterWithGithub.html_url}
+                repos={profile.frontmatterWithGithub.public_repos}
+                followers={profile.frontmatterWithGithub.followers}
+                following={profile.frontmatterWithGithub.following}
+              />
+            );
+          })}
         </div>
       </div>
     </section>
