@@ -44,7 +44,7 @@
   height: 70px;
   border-radius: 50px;
   border: none;
-  background-color: #f74700;
+  background-image: linear-gradient(to right, #fa3967 , #fa9639);
   font-size: 25px;
   color: #ffffff;
   font-weight: bold;
