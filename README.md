@@ -14,6 +14,17 @@ This repo is intended to help all the newbie developers in the software develope
 ## Note
 <h1>This Repository is for beginners only!! </h1>
 
+
+## Some basic rules to keep in mind:
+These contains some basic guidelines from official website of hacktober fest,which should be kept in mind by contributers.
+
+1)Dont't make spammy pull requests like adding your name or other unnecessary things.This kind of pull requests may 
+face strict actions.
+
+2)If a maintainer reports your pull request as spam, it will not be counted toward your participation in Hacktoberfest.
+
+3)If a maintainer reports behavior that’s not in line with the project’s code of conduct, you will be ineligible to participate
+
 ## How to submit a pull request
 1. Fork this repo in your GitHub
 
