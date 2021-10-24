@@ -51,6 +51,21 @@
   padding: 10px 20px;
 }
 
+.cta__btn:hover {
+  width: 300px;
+  height: 70px;
+  border-radius: 50px;
+  border: none;
+  background-image: linear-gradient(to right, #fa3967 , #fa9639);
+  font-size: 25px;
+  color: #ffffff;
+  font-weight: bold;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: 0.3s linear;
+  transform: scale(1.05);
+}
+
 @media only screen and (max-width: 800px) {
   .hero__container {
     flex-direction: column;
